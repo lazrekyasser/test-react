@@ -1,0 +1,40 @@
+.posts {
+    /* width: 100%; */
+    padding: 30px 60px;
+    overflow-x: hidden;
+}
+.posts > * {
+    margin-bottom: 30px;
+}
+.posts .title {
+    font-size: x-large;
+    font-weight: 800;
+}
+
+.all-posts {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.post {
+    width: 300px;
+    background-color: white;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.post-title {
+    font-size: larger;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 650px) {
+    .all-posts {
+        flex-direction: row;
+    }
+}
