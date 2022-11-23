@@ -13,11 +13,13 @@ export const Login = () => {
     useEffect(() => {
         const user = JSON.parse(localStorage.getItem('user-cred'))
         console.log('user = ',user)//null , better get the user from a context
-        if (user)
-            setUser(user);
-            navigate('/', {
-                replace: true,
-            })
+        if (user){
+            console.log('hanaya');
+                // setUser(user);
+                navigate('/', {
+                    replace: true,
+                })
+        }
     }, [])
 
     return (
@@ -36,8 +38,9 @@ export const Login = () => {
                             email: values.email,
                             password: values.password
                         }));
+                        setUser(values);
                         navigate('/', {
-                            replace: true,
+                            // replace: true,
                             // state: {}
                         })
                         break ;

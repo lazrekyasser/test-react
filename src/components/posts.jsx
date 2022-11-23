@@ -1,24 +1,28 @@
 import { useContext, useEffect, useState } from 'react'
 import { UserContext } from '../App';
 import '../styles/posts.css'
-import { useGetUserByEmail } from '../utils';
+import { getUserByEmail } from '../utils';
 import { Post } from './post'
 
 
 export const Posts = () => {
     const [posts, setPosts] = useState([])
     const {user, setUser} = useContext(UserContext);
+    const [userId, setUserId] = useState(null)
     
-    let userId = useGetUserByEmail(user);//null or userId
+    // useGetUserByEmail(user);//null or userId
     console.log('userid = ', userId)
     useEffect(() => {
+        const id = getUserByEmail(user);
+        console.log('id ', id);
+        setUserId(id);
         (async () => {
             const res = await fetch('https://jsonplaceholder.typicode.com/posts');
             const data = await res.json();
             if (userId)
                 setPosts(data.filter(u => u.userId === userId));
         })()
-    }, [setPosts])
+    }, [setPosts, userId, setUserId, user])
     return (
         <div className="posts">
             <div className="title">Posts</div>

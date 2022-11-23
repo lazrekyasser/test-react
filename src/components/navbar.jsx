@@ -1,13 +1,17 @@
 import '../styles/navbar.css'
 import { NavLink, useNavigate } from 'react-router-dom'
+import { useContext } from 'react'
+import { UserContext } from '../App'
 
 export const NavBar = ({isLoged}) => {
+    const {user, setUser} = useContext(UserContext)
     const navigate = useNavigate()
     const handleLogout = () => {
         localStorage.removeItem('user-cred');
         navigate('/', {
-            replace: true
+            // replace: true
         })
+        setUser(null)
     }
 
     return (
@@ -24,7 +28,7 @@ export const NavBar = ({isLoged}) => {
                         color: isActive ? "#ff5455" : "black"
                     }
                 }} to="/posts" className='link'>Posts</NavLink></button>: null}
-                {isLoged ? <button onClick={handleLogout} className='logout-button'>Logout</button>: <button className='login-button'><NavLink to="/login" className='link'>Login</NavLink></button>}
+                {isLoged ? <button onClick={handleLogout} className='logout-button'>Logout</button>: <NavLink className='login-button link' to="/login" >Login</NavLink>}
             </div>
         </div>
     )

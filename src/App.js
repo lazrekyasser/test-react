@@ -12,6 +12,7 @@ function App() {
   const [user, setUser] = useState(null);
   
   useEffect(()=> {
+    console.log('use effect');
     const user = JSON.parse(localStorage.getItem('user-cred'));
     if (user) {
       console.log(user)
