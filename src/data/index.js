@@ -1,52 +1,52 @@
 export const data = [
     {
         userId: 1,
-        email: 'user1@gmail.com',
-        password: '12345678'
+        email: 'test1@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 2,
-        email: 'user2@gmail.com',
-        password: '12345678'
+        email: 'test2@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 3,
-        email: 'user3@gmail.com',
-        password: '12345678'
+        email: 'test3@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 4,
-        email: 'user4@gmail.com',
-        password: '12345678'
+        email: 'test4@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 5,
-        email: 'user5@gmail.com',
-        password: '12345678'
+        email: 'test5@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 6,
-        email: 'user6@gmail.com',
-        password: '12345678'
+        email: 'test6@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 7,
-        email: 'user7@gmail.com',
-        password: '12345678'
+        email: 'test7@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 8,
-        email: 'user8@gmail.com',
-        password: '12345678'
+        email: 'test8@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 9,
-        email: 'user9@gmail.com',
-        password: '12345678'
+        email: 'test9@gmail.com',
+        password: 'abcdefjh'
     },
     {
         userId: 10,
-        email: 'user10@gmail.com',
-        password: '12345678'
+        email: 'test10@gmail.com',
+        password: 'abcdefjh'
     },
 ]
